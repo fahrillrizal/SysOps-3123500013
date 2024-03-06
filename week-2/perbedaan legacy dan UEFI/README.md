@@ -1,5 +1,9 @@
 <div align="center">
+<<<<<<< HEAD
   <h1 style="text-align: center;font-weight: bold">Praktikum<br>SysOp</h1>
+=======
+  <h1 style="text-align: center;font-weight: bold">Praktikum 2<br>SysOp Perbedaan Legacy & UEFI</h1>
+>>>>>>> edbe672 (update readme)
   <h4 style="text-align: center;">Dosen Pengampu : Dr. Ferry Astika Saputra, S.T., M.Sc.</h4>
 </div>
 <br />
