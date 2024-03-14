@@ -18,10 +18,12 @@
 
 ## Daftar Isi
 1. [Pendahuluan](#about-cpu)
-1. [Soal 1](#1-buatlah-presentasi-langkah-demi-langkah-tentang-siklus-cpu-fetchdecodeexecute-utk-mengeksekusi-sebuah-program-jelaskan-juga-peran-dari-bahasa-pemrograman-dan-compiler-begitu-juga-dengan-peran-dari-sistem-operasi-gunakan-referensi--video-referensi-1-dan-video-referensi-2)
-2. [Soal 2](#2-apabila-debian-vm-mu-masih-belum-terdapat-packeage-gcc-make-dan-git-lakukan-instalasi-dan-catat-setiap-langkahnya)
-3. [Soal 3](#3-jalankan-vm-debian-anda-lalu-lakukan-clone-httpsgithubcomferryastikaflops-iops-compile-dan-eksekusi-sesuai-petunjuk-sesuiakan-jumlah-thread-dengan-jumlah-cpu-yang-ada-di-vm-debianmu-catat-hasilnya-dan-jelaskan-arti-dari-hasil-ekskusi-lakukan-sebanyak-5-kali-bandingkan-hasilnya-anatar-temanmu-buat-plot-perbandinnga-hasil-untuk-masing-masing-pc-di-tiap-kelompokmu-analisa-hasil-percobaan-tadi-dan-beri-kesimpulan-tentang-iops-dan-flops)
-4. [Hasil Brenchmark](#hasil-tes-brenchmark)
+2. [Soal](#soal)
+    - [Soal 1](#1-buatlah-presentasi-langkah-demi-langkah-tentang-siklus-cpu-fetchdecodeexecute-utk-mengeksekusi-sebuah-program-jelaskan-juga-peran-dari-bahasa-pemrograman-dan-compiler-begitu-juga-dengan-peran-dari-sistem-operasi-gunakan-referensi--video-referensi-1-dan-video-referensi-2)
+    - [Soal 2](#2-apabila-debian-vm-mu-masih-belum-terdapat-packeage-gcc-make-dan-git-lakukan-instalasi-dan-catat-setiap-langkahnya)
+    - [Soal 3](#3-jalankan-vm-debian-anda-lalu-lakukan-clone-httpsgithubcomferryastikaflops-iops-compile-dan-eksekusi-sesuai-petunjuk-sesuiakan-jumlah-thread-dengan-jumlah-cpu-yang-ada-di-vm-debianmu-catat-hasilnya-dan-jelaskan-arti-dari-hasil-ekskusi-lakukan-sebanyak-5-kali-bandingkan-hasilnya-anatar-temanmu-buat-plot-perbandinnga-hasil-untuk-masing-masing-pc-di-tiap-kelompokmu-analisa-hasil-percobaan-tadi-dan-beri-kesimpulan-tentang-iops-dan-flops)
+3. [Analisa](#analisa-hasil-tes-brenchmark)
+4. [Kesimpulan](#kesimpulan)
 5. [Referensi](#referensi)
 
 # About CPU
@@ -33,9 +35,9 @@ Sebuah CPU dapat memiliki satu atau beberapa core. CPU dengan satu core hanya da
 ### 1. Buatlah presentasi langkah demi langkah tentang siklus CPU (fetch,decode,execute) utk mengeksekusi sebuah program. Jelaskan juga peran dari Bahasa pemrograman dan compiler, begitu juga dengan peran dari Sistem Operasi. Gunakan referensi : Video referensi 1 dan Video referensi 2
 **Jawab:**
 ## Link PPT
-https://www.canva.com/design/DAF_Nic2c0s/d9138dDte5MskMD75m0JPA/view?utm_content=DAF_Nic2c0s&utm_campaign=designshare&utm_medium=link&utm_source=editor
+https://www.canva.com/design/DAF_XVqVaGA/9oEkVnNyncrgFKXQTYBwdg/view?utm_content=DAF_XVqVaGA&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
-### 2. Apabila Debian VM mu masih belum terdapat packeage gcc, make dan git, lakukan instalasi dan catat setiap langkahnya!
+### 2. Apabila Debian VM mu masih belum terdapat package gcc, make dan git, lakukan instalasi dan catat setiap langkahnya!
 **Jawab:**
 ## Installation package gcc, make dan git
 1. Masuk ke terminal debian
@@ -75,20 +77,27 @@ Perbedaan utama antara FLOPS dan IOPS adalah bahwa FLOPS mengukur kinerja proses
 4. Jalankan perintah IOPS dan catat hasilnya
 ![App Screenshot](assets/img/iops.png)
 
-## Hasil Tes Brenchmark
+## Analisa Hasil Tes Brenchmark
 ### FLOPS
-| Laptop  | Max Single Core #1 | Max Single Core #2 | Max Single Core #3 | Max Single Core #4 | Max Single Core #5 |
-|---------|---------------|---------------|---------------|---------------|---------------|
-| Fahril  | 7.5 Gigaflops            | 6.8 Gigaflops            | 6.5 Gigaflops            | 6.3 Gigaflops            | 6.5 Gigaflops            |
-| Adrian  | 25            | 27            | 24            | 26            | 23            |
-| Arief   | 25            | 26            | 23            | 28            | 25            |
+| Laptop  | Max CPU Troughput | Max Single Core |
+|---------|----------------|---------------|
+| Fahril  | 30.1 Gigaflops | 7.5 Gigaflops |
+| Adrian  | 16.5 Gigaflops | 8.2 Gigaflops |
+| Arief   | 11.9 Gigaflops | 5.9 Gigaflops |
+
+*hasil tertinggi
 
 ### IOPS
-| Laptop  | Max Single Core #1 | Max Single Core #2 | Max Single Core #3 | Max Single Core #4 | Max Single Core #5 |
-|---------|---------------|---------------|---------------|---------------|---------------|
-| Fahril  | 7.4 Gigaiops            | 6.9 Gigaiops            | 7 Gigaiops            | 6.9 Gigaiops            | 6.8 Gigaiops            |
-| Adrian  | 25            | 27            | 24            | 26            | 23            |
-| Arief   | 25            | 26            | 23            | 28            | 25            |
+| Laptop  | Max CPU Troughput | Max Single Core |
+|---------|---------------|--------------|
+| Fahril  | 29.9 Gigaiops | 7.4 Gigaiops |
+| Adrian  | 17.3 Gigaiops | 8.9 Gigaiops |
+| Arief   |  8.9 Gigaiops | 4.4 Gigaiops |
+
+*hasil tertinggi
+
+## Kesimpulan
+Dari hasil percobaan yang telah kami lakukan, dapat ditarik kesimpulan bahwa perbandingan antara FLOPS (Floating Point Operations Per Second) dan IOPS (Input/Output Operations Per Second) tidak dapat dilakukan secara langsung. Hal ini disebabkan oleh fokus keduanya yang berbeda dalam mengukur kinerja sistem komputasi. FLOPS lebih terkait dengan kemampuan prosesor dalam menjalankan operasi perhitungan matematika floating point, sementara IOPS lebih menyoroti kemampuan sistem penyimpanan dalam mengelola dan mengakses data. Kendati keduanya merupakan indikator yang penting dalam mengevaluasi performa sistem, perbandingan atau pertukaran nilai keduanya menjadi sulit karena keduanya menunjukkan dimensi yang berbeda dari kinerja sistem. Oleh karena itu, untuk mendapatkan gambaran yang lebih utuh, penting untuk mempertimbangkan masing-masing metrik dengan cermat sesuai dengan kebutuhan dan tujuan penggunaan sistem komputasi tersebut.
 
 ## Referensi
 - [Apa itu CPU](https://aws.amazon.com/id/what-is/cpu/)
