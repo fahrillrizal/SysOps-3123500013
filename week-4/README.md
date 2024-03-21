@@ -151,7 +151,7 @@ Beberapa perintah Linux yang digunakan untuk proses penyaringan antara lain :
 
    Perintah $ mkdir digunakan untuk membuat direktori baru di sistem file. Itu akan membuat direktori jika direktori yang diinginkan belum ada, tetapi jika direktori dengan nama yang sama sudah ada, maka akan terjadi kesalahan.
 
-    ![App Screenshot](assets/img/percobaansyop/3.png)
+    ![App Screenshot](assets/img/percobaansyop/a.png)
 
 ## Percobaan 2 : Pembelokan (redirection)
 1. Pembelokan standar output
