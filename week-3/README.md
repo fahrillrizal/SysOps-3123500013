@@ -78,6 +78,10 @@ Perbedaan utama antara FLOPS dan IOPS adalah bahwa FLOPS mengukur kinerja proses
 ![App Screenshot](assets/img/iops.png)
 
 ## Analisa Hasil Tes Brenchmark
+### Spesifikasi VM
+Fahril : 4 Core CPU, 4096mb RAM
+Adrian : 2 Core CPU, 2048mb RAM
+Arief : 2 Core CPU, 2048mb RAM
 ### FLOPS
 | Laptop  | Max CPU Troughput | Max Single Core |
 |---------|----------------|---------------|
