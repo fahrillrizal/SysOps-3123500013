@@ -13,6 +13,13 @@
   <hr><hr>
 </div>
 
+## Daftar Isi
+1. [Dasar teori](#dasar-teori)
+2. [Tugas](#tugas)
+    - [Tugas Pendahuluan](#tugas-pendahuluan)
+    - [Percobaan](#percobaan)
+3. [Kesimpulan](#kesimpulan)
+
 # Proses dan Manajemen Proses
 
 ### POKOK BAHASAN
@@ -127,7 +134,7 @@ Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX ad
     $ ps
     ```
     ![img](assets/img/2.png)
-3. Untuk melihat faktor/elemen lainnya, gunakan option –u (user). %CPU adalah presentasi CPU time yang digunakan oleh proses tersebut, %MEM adalah presentasi system memori yang digunakan proses, SIZE adalah jumlah memori yang digunakan, RSS (_Real System Storage_) adalah jumlah memori yang digunakan, __START__ adalah kapan proses tersebut diaktifkan.
+3. Untuk melihat faktor/elemen lainnya, gunakan option –u (user). %cpu adalah presentasi CPU time yang digunakan oleh proses tersebut, %mem adalah presentasi system memori yang digunakan proses, SIZE adalah jumlah memori yang digunakan, RSS (_Real System Storage_) adalah jumlah memori yang digunakan, __START__ adalah kapan proses tersebut diaktifkan.
     ```
     $ ps -u
     ```
