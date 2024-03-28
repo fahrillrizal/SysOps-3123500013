@@ -123,6 +123,28 @@ Utilitas untuk melakukan pengontrolan proses dapat ditemukan pada sistem UNIX ad
 ## PERCOBAAN
 1. Login sebagai user.
 2. Download program C++ untuk menampilkan bilangan prima yang bernama _primes_.
+    ```
+    $ sudo apt-get install g++
+    ```
+    ![img](assets/img/p-2.png)
+    Buat file dengan nama primez
+    ```
+    $ touch primez.cpp
+    ```
+    ![img](assets/img/p-3.png)
+    Isi file primez dengan code untuk mengecek bilangan prima
+    ```
+    $ nano primez.cpp
+    ```
+    ![img](assets/img/p-4.png)
+    Ctrl+x untuk keluar dan menyimpan
+
+    compile kode dengan perintah
+    ```
+    $ g++ -o primez primez.cpp
+    $ ./primez
+    ```
+    ![img](assets/img/p-5.png)
 3. Lakukan percobaan-percobaan di bawah ini kemudian analisa hasil percobaan.
 4. Selesaikan soal-soal latihan.
 
