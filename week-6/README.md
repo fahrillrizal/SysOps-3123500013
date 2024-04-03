@@ -16,8 +16,8 @@
 ## Daftar Isi
 1. [Dasar teori](#dasar-teori)
 2. [Tugas](#tugas)
-    - [Tugas Pendahuluan](#tugas-pendahuluan)
-    - [Percobaan](#percobaan)
+    - [Tugas Percobaan 5](#percobaan-5-menghentikan-dan-memulai-kembali-job)
+    - [Tugas Percobaan 6](#percobaan-6-percobaan-dengan-penjadwalan-prioritas)
 3. [Kesimpulan](#kesimpulan)
 
 # Proses dan Manajemen Proses
