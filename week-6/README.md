@@ -18,6 +18,7 @@
 2. [Tugas](#tugas)
     - [Tugas Percobaan 5](#percobaan-5-menghentikan-dan-memulai-kembali-job)
     - [Tugas Percobaan 6](#percobaan-6-percobaan-dengan-penjadwalan-prioritas)
+    - [Tugas Latihan](#latihan)
 3. [Kesimpulan](#kesimpulan)
 
 # Proses dan Manajemen Proses
@@ -217,6 +218,133 @@ terjadi dengan tampilan top. Proses tambahan akan muncul dan nilai
 
 17.	Logout dan login kembali sebagai user.
 
+## LATIHAN:
+
+1.	Masuk ke tty2 dengan Ctrl+Alt+F2. Ketik ps – au dan tekan Enter. Kemudian perhatikan keluaran sebagai berikut :
+
+    a. Sebutkan nama -nama proses yang bukan root
+    ![img](assets/img/lat/a.png)
+    ****semua proses kecuali /bin/login -p-- adalah root***
+
+    b.	Tulis PID dan COMMAND dari proses yang paling banyak menggunakan CPU time
+    ![img](assets/img/lat/a.png)
+    ```
+    PID : 2001
+    COMMAND : ps -au
+    ```
+
+    c.	Sebutkan buyut proses dan PID dari proses tersebut
+    ![img](assets/img/lat/a.png)
+    ```
+    /bin/login -p -- dengan PID 1901
+    ```
+    d.	Sebutkan beberapa proses daemon
+    ```
+    /bin/login -p -- dengan PID 1901
+    ```
+
+    e.	Pada prompt login lakukan hal- hal sebagai berikut :
+    - $ csh
+    - $ who
+    - $ bash
+    - $ ls
+    - $ sh
+    - $ ps
+
+    ![img](assets/img/lat/b.png)
+    
+    perintah `$ csh` adalah sebuah shell interaktif yang menawarkan lebih banyak sintaks dibandingkan dengan Bourne Shell. perintah `$ bash` digunakan untuk mengkonversi instruksi yang dimasukkan ke dalam bahasa biner yang dapat dimengerti oleh kernel Linux. perintah `$ ls` digunakan untuk menunjukkan semua file yang terletak dalam direktori aktif. perintah `$ sh` adalah singkatan dari Bourne Shell, yang bertindak sebagai interpreter perintah atau shell standar di unix. perintah `$ ps` digunakan untuk menampilkan daftar proses yang sedang berlangsung dalam sistem. Tampilan dari perintah ps mencakup empat kolom utama: PID, TTY, TIME, dan CMD. Perintah `$ who`digunakan untuk menampilkan daftar pengguna yang saat ini login ke sistem. Ini menampilkan informasi seperti nama pengguna, terminal yang mereka gunakan, waktu login, dan sebagainya. Perintah ini sering digunakan untuk memeriksa siapa yang sedang menggunakan sistem atau untuk melihat apakah ada pengguna yang login secara tidak sah.
+    f.	Sebutkan PID yang paling besar dan kemudian buat urut-urutan proses sampai ke PPID = 1.
+![img](assets/img/lat/c.png)
+```
+- PID = 1953 (bash)
+- PID = 2746 (csh)
+- PID = 2759 (bash)
+- PID = 2772 (sh)
+- PID = 2773 (ps)
+```
+2.	Cobalah format tampilan ps dengan opsi berikut dan perhatikan hasil tampilannya :
+    1. ```
+        $ ps -f //daftar penuh
+        ```	
+    ![img](assets/img/lat/1.png)
+
+    2. ```
+       $ ps -j //format job
+        ```
+    ![img](assets/img/lat/2.png)
+
+    3. ```
+        $ ps j //format job control
+        ```
+    ![img](assets/img/lat/3.png)
+
+    4. ```
+        $ ps l //daftar memanjang
+        ```
+    ![img](assets/img/lat/4.png)
+
+    5. ```
+        $ ps s //format sinyal
+        ```
+    ![img](assets/img/lat/5.png)
+
+    6. ```
+        $ ps v //format virtual memory
+        ```
+    ![img](assets/img/lat/6.png)
+
+    7. ```
+        $ ps x //format register i386
+        ```
+    ![img](assets/img/lat/7.png)
+
+2.	Lakukan urutan pekerjaan berikut :
+
+a.	Gunakan perintah `find` ke seluruh direktory pada sistem, belokkan output sehingga daftar direktori dialihkan ke file directories.txt dan daftar pesan error dialihkan ke file errors.txt
+
+![img](assets/img/lat/8.png)
+
+b.	Gunakan perintah sleep 5. Apa yang terjadi dengan perintah ini ?
+
+![img](assets/img/lat/9.png)
+
+c.	Jalankan perintah pada background menggunakan `&`
+
+![img](assets/img/lat/10.png)
+
+d.	Jalankan `sleep 15` pada _foreground_ , hentikan sementara dengan `Ctrl- Z` dan kemudian letakkan pada background dengan `bg`. Ketikkan `jobs`. Ketikkan `ps`. Kembalikan __job__ ke _foreground_ dengan perintah `fg`.
+
+![img](assets/img/lat/11.png)
+
+e.	Jalankan `sleep 15` pada _background_ menggunakan `&` dan kemudian gunakan perintah `kill` untuk menghentikan proses diikuti __job number__.
+
+![img](assets/img/lat/12.png)
+
+f.	Jalankan `sleep 15` pada _background_ menggunakan `&` dan kemudian gunakan `kill` untuk menghentikan sementara proses. Gunakan `bg` untuk melanjutkan menjalankan proses.
+
+![img](assets/img/lat/13.png)
+
+g.	Jalankan `sleep 60` pada _background_ 5 kali dan terminasi semua pada dengan menggunakan perintah `killall`.
+
+![img](assets/img/lat/14.png)
+
+h.	Gunakan perintah `ps`, `w` dan `top` untuk menunjukkan semua proses yang sedang dieksekusi.
+
+![img](assets/img/lat/15-1.png)
+![img](assets/img/lat/15-2.png)
+
+i. Gunakan perintah `ps -aeH` untuk menampilkan hierarki proses. Carilah init proses, apakah anda bisa identifikasi sistem daemon yang penting ? Dapatkan Anda identifikasi shell dan subproses ?
+![img](assets/img/lat/16.png)
+![img](assets/img/lat/16-2.png)
+![img](assets/img/lat/16-1.png)
+
+j. Kombinasikan `ps -fae` dan `grep`, apa yang anda lihat ?
+![img](assets/img/lat/17.png)
+
+k. Jalankan proses `sleep 300` pada _background_. Log off komputer dan Login kembali. Lihat daftar semua proses yang berjalan. Apa yang terjadi pada proses sleep
+![img](assets/img/lat/18-1.png)
+![img](assets/img/lat/18-2.png)
 
 ## Kesimpulan
 Proses dan manajemen proses memainkan peran kunci dalam operasi sistem Linux, mengatur dan mengelola eksekusi program serta penggunaan sumber daya sistem. Konsep proses dalam sistem operasi Linux mencakup pengelompokan program yang sedang berjalan ke dalam unit-unit yang dapat dikelola, dengan masing-masing memiliki identitas unik yang disebut PID (Process ID). Ini memungkinkan sistem untuk melacak dan mengontrol proses secara efisien.
