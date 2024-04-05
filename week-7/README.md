@@ -122,12 +122,14 @@ int main(void) {
 ```
 ![img](assets/img/5-5.png)
 - Parent Process dibuat (PID unik).
-- Parent Process mencetak informasi proses (PID, PPID, user ID) 3 kali dengan sleep (delay) di antara setiap iterasi.
+- Parent Process mencetak informasi proses (PID, PPID, UID) 3 kali dengan sleep (delay) di antara setiap iterasi.
 ```
-+---------+ (Parent Process)
-| PID_A   |
-|         |
-+---------+
+
+        PID_A (cetak PID, PPID, UID)  (Parent Process)
+         |
+         v (loop 3x dan jeda 3 detik)
+  Cetak PID, PPID, UID
+
 ```
 - **fork02.c**
 ```
@@ -155,7 +157,7 @@ int main(void) {
 ```
   PID_A  (Parent Process)   
     |
-    v (fork)
+    v (fork) jeda 2 detik
   PID_B (Child Process)
 
 (Infinite loop)
@@ -190,25 +192,25 @@ int main(void) {
         v (jeda 5 detik)
       PID_A
         |
-        v (jeda 5 detik)
+        v
       PID_B
         |
         v (jeda 5 detik)
       PID_A
         |
-        v (jeda 5 detik)
+        v
       PID_B
         |
         v (jeda 5 detik)
       PID_A
         |
-        v (jeda 5 detik)
+        v
       PID_B
         |
         v (jeda 5 detik)
       PID_A
         |
-        v (jeda 5 detik)
+        v
       PID_B
 ```
 
