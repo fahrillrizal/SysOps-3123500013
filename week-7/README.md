@@ -82,7 +82,7 @@ Manual: `$ man 3 exec`
 ![img](assets/img/fork.jpg)
 Dalam bahasa pemrograman C, `fork()` adalah sebuah _sistem panggilan_ `(system call)` yang digunakan untuk membuat proses baru _(child process)_ dari proses yang sudah ada _(parent process)_. Proses baru ini memiliki salinan dari lingkungan proses induknya. Dengan kata lain, `fork()` menciptakan duplikat dari proses pemanggil sehingga kedua proses, yaitu proses induk dan proses anak, memiliki konteks memori yang terpisah dan mulai berjalan secara independen setelah pemanggilan `fork()`.
 ### Implementasi `fork()` dalam Bahasa Pemrograman C
-![img](assets/img/snippet.png)
+[Implementasi fork() bahasa c](fork.c)
 
 Dalam contoh di atas:
 
@@ -120,9 +120,9 @@ int main(void) {
   return 0;
 }
 ```
-![img](assets/img/5-5.png)
-- Parent Process dibuat (PID unik).
-- Parent Process mencetak informasi proses (PID, PPID, UID) 3 kali dengan sleep (delay) di antara setiap iterasi.
+![img](assets/img/1.png)
+- Parent Process dibuat (PID).
+- Parent Process mencetak informasi proses (PID, PPID, UID) 3 kali dengan sleep (delay) 3 detik di antara setiap iterasi.
 ```
 
         PID_A (cetak PID, PPID, UID)  (Parent Process)
@@ -150,7 +150,7 @@ int main(void) {
   return 0;
 }
 ```
-![img](assets/img/5-5.png)
+![img](assets/img/2.png)**loop tidak berujung ctrl+c untuk menghentikan proses*
 - Parent Process membuat Child Process.
 - Kedua proses (Parent dan Child) terus mencetak PID dan nilai variabel x yang diubah di dalam loop tak hingga (perilaku tidak disarankan).
 - Pohon Proses (tidak stabil karena Infinite loop):
@@ -180,9 +180,18 @@ int main(void) {
   return 0;
 }
 ```
-![img](assets/img/5-5.png)
+![img](assets/img/3.png)
 - Proses induk membuat proses anak.
 - Kedua proses (Parent dan Child) mencetak PID mereka sendiri 5 kali dengan sleep (delay) di antara setiap iterasi.
+```
+            PID_A   (Proses Induk)
+              |         
+              v (fork)
+            PID_B   (Proses Anak)
+              |
+              v
+(loop 5x dengan jeda 5 detik)
+```
 ```
       PID_A   (Proses Induk)
         |         
@@ -264,7 +273,7 @@ int main(void) {
   return 0;
 }
 ```
-![img](assets/img/5-5.png)
+![img](assets/img/4.png)
 - Parent Process membuat Child Process.
 - Child Process mencetak informasi prosesnya (PID, PPID).
 - Parent Process mencetak informasi prosesnya (PID, child PID).
@@ -328,7 +337,7 @@ int main(void) {
 }
 
 ```
-![img](assets/img/5-5.png)
+![img](assets/img/5.png)
 - Parent Process membuat Child Process.
 - Child Process mencoba mengganti dirinya sendiri dengan program eksternal "/bin/ls" menggunakan execl.
   - Jika berhasil, kode setelah execl tidak akan dijalankan.
@@ -391,9 +400,8 @@ int main(void) {
     }
     return 0;
 }
-
 ```
-![img](assets/img/5-5.png)
+![img](assets/img/6.png)
 - Parent Process membuat Child Process.
 - Child Process mencoba mengganti dirinya sendiri dengan program eksternal "./fork03" menggunakan execl.
   - Jika berhasil, kode setelah execl tidak akan dijalankan.
@@ -477,7 +485,9 @@ int main() {
     return 0;
 }
 ```
-![img](assets/img/5-5.png)
+![img](assets/img/2-1.png)
+![img](assets/img/2-12.png)
+![img](assets/img/2-2.png)
 
 **Analisa Kode**
 1. Fungsi Perkalian Matriks: Fungsi `perkalian()` digunakan untuk melakukan perkalian matriks. Matriks hasil dideklarasikan dalam fungsi utama, kemudian diisi oleh fungsi perkalian().
