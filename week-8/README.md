@@ -633,22 +633,22 @@ Jika Anda ingin menghindari ekspansi variabel dalam string, Anda dapat menggunak
 
 Sebagai contoh, dalam perintah `echo` yang pertama, variabel "nama" akan diekspansi dan diinterpretasikan sebagai string sebelum dicetak. Namun, dalam perintah `echo` yang kedua, karakter escape (\) digunakan sebelum tanda dolar ($), sehingga variabel "nama" dicetak sebagai string literal.
 
-![App Screenshot](img/sc3.jpg)
+![App Screenshot](img/special/17-1.png)
 
 Output : 
 
-![App Screenshot](img/sc4.jpg)
+![App Screenshot](img/special/17-2.png)
 
 
 Karakter Backslash (\) digunakan untuk melarikan karakter-karakter dalam string. Biasanya, ini digunakan dalam string yang diapit oleh tanda kutip ganda (""). 
 
 Dalam contoh pertama, pada perintah `echo`,  akan menampilkan ID proses. Namun, dalam contoh kedua, perintah `echo` berisi \$, yang menyebabkan $$ ditampilkan sebagai string literal dengan karakter escape.
 
-![App Screenshot](img/sc5.jpg)
+![App Screenshot](img/special/18-1.png)
 
 Output : 
 
-![App Screenshot](img/sc6.jpg)
+![App Screenshot](img/special/18-2.png)
 
 ## Bash Shell Conditional Statements
 
@@ -656,19 +656,19 @@ Bash Script menyediakan ekspresi kondisional untuk menjalankan kode yang berbeda
 
 - If-Else Conditional Statements
 
-![App Screenshot](img/if1.jpg)
+![App Screenshot](img/conditional/23-1.png)
 
 Output : 
 
-![App Screenshot](img/if2.jpg)
+![App Screenshot](img/conditional/23-2.png)
 
 - If..Elif..Else Statements
 
-![App Screenshot](img/if3.jpg)
+![App Screenshot](img/conditional/24-1.png)
 
 Output : 
 
-![App Screenshot](img/if4.jpg)
+![App Screenshot](img/conditional/24-2.png)
 
 ## Bash - Loops
 
@@ -682,41 +682,41 @@ Loop digunakan untuk menjalankan blok kode untuk sejumlah kali tertentu. Misalny
 
 Loop for digunakan untuk menjalankan kode beberapa kali berdasarkan kondisi yang ditentukan.
 
-![App Screenshot](img/loop1.jpg)
+![App Screenshot](img/loop/19-1.png)
 
 Output : 
 
-![App Screenshot](img/loop2.jpg)
+![App Screenshot](img/loop/19-2.png)
 
 ##### for index loop
 
 Loop for indeks mirip dengan loop for dalam bahasa C. Ini menjalankan kode beberapa kali berdasarkan kondisi yang benar. Dimulai dengan nilai awal dan iterasi berisi nilai yang akan ditambahkan dengan 1.
 
-![App Screenshot](img/loop3.jpg)
+![App Screenshot](img/loop/20-1.png)
 
 Output : 
 
-![App Screenshot](img/loop4.jpg)
+![App Screenshot](img/loop/20-2.png)
 
 ##### while loop in bash
 
 Loop while dalam Bash memungkinkan untuk menjalankan kode secara berulang selama kondisi tertentu benar. Jika kondisinya menjadi salah, loop keluar.
 
-![App Screenshot](img/loop5.jpg)
+![App Screenshot](img/loop/21-1.png)
 
 Output : 
 
-![App Screenshot](img/loop6.jpg)
+![App Screenshot](img/loop/21-2.png)
 
 ##### Until loop in bash
 
 Kata kunci until dalam Bash digunakan untuk menjalankan kode secara berulang hingga suatu kondisi tertentu menjadi benar, pada saat itu loop keluar.
 
-![App Screenshot](img/loop7.jpg)
+![App Screenshot](img/loop/22-1.png)
 
 Output : 
 
-![App Screenshot](img/loop8.jpg)
+![App Screenshot](img/loop/21-2.png)
 
 ## Bash - Append String
 
@@ -726,21 +726,21 @@ Operator perbandingan digunakan untuk memeriksa nilai satu dengan yang lain deng
 
 ##### Bash Athematic expressions
 
-![App Screenshot](img/append1.jpg)
+![App Screenshot](img/Append-String/11.png)
 
 Output : 
 
-![App Screenshot](img/append2.jpg)
+![App Screenshot](img/Append-String/12.png)
 
 ##### Bash Athematic Expansion
 
 seperti ekspresi. Ini menghitung nilai dari suatu ekspresi dan menggantikan hasilnya dengan nilai tersebut, selalu dengan awalan tanda dolar. Misalnya, untuk menghitung rata-rata dari dua angka dan mencetak hasilnya, kita menggunakan sintaks ekspansi yang mengevaluasi ekspresi dan menggantikan hasilnya dengan keluaran dari ekspresi tersebut.
 
-![App Screenshot](img/append3.jpg)
+![App Screenshot](img/Append-String/13.png)
 
 Output : 
 
-![App Screenshot](img/append4.jpg)
+![App Screenshot](img/Append-String/14.png)
 
 ## Function
 
@@ -947,11 +947,17 @@ Berikut adalah operator perbandingan:
 - `-ge`: Lebih besar dari atau sama dengan
   - Memeriksa apakah variabel pertama lebih besar dari atau sama dengan variabel kedua
 
-![App Screenshot](img/comp1.jpg)
+Kode Gagal 
+![App Screenshot](img/numbers-coparasion/1.png)
 
-Output : 
+Kode Sukses 
+![App Screenshot](img/numbers-coparasion/2.png)
 
-![App Screenshot](img/comp2.jpg)
+Output Gagal 
+![App Screenshot](img/numbers-coparasion/3.png)
+
+Output Sukses
+![App Screenshot](img/numbers-coparasion/4.png)
 
 ## Bash - Check Directory
 
@@ -972,19 +978,20 @@ fi
 
 ##### How to mkdir only if a directory does not already exist?
 
-![App Screenshot](img/check1.jpg)
+![App Screenshot](img/check-directory/1.png)
 
 Output : 
 
-![App Screenshot](img/check2.jpg)
+![App Screenshot](img/check-directory/2.png)
+![App Screenshot](img/check-directory/3.png)
 
 Sebagai alternatif, ekspresi kondisional ternary digunakan sebagai pengganti ekspresi kondisional if.
 
-![App Screenshot](img/check3.jpg)
+![App Screenshot](img/check-directory/4.png)
 
 Output : 
 
-![App Screenshot](img/check4.jpg)
+![App Screenshot](img/check-directory/5.png)
 
 ## Bash - File Name
 
@@ -1008,11 +1015,11 @@ Sebagai contoh, pertimbangkan jalur /home/fahril/run.sh, hasil ekstensinya adala
 
 Awalnya, perintah basename digunakan untuk menghapus jalur direktori dan mengembalikan nama file untuk jalur yang ditentukan, dan nama file ini kemudian digunakan bersama dengan sintaks ekspresi untuk mengembalikan hanya ekstensinya.
 
-![App Screenshot](img/file-name/1.png)
+![App Screenshot](img/file-name/3.png)
 
 Output : 
 
-![App Screenshot](img/file-name/2.png)
+![App Screenshot](img/file-name/4.png)
 
 ## Bash - Split String
 
@@ -1025,31 +1032,31 @@ Perintah awk, sebuah utilitas Linux yang kompatibel dengan semua distribusi bash
 
 Inputnya diberikan menggunakan simbol pipa (|), dan contoh di bawah ini menunjukkan pembagian sebuah string yang berisi titik dua 
 
-![App Screenshot](img/file-name/3.png)
+![App Screenshot](img/split-string/1.png)
 
 Output : 
 
-![App Screenshot](img/file-name/4.png)
+![App Screenshot](img/split-string/2.png)
 
 ##### split using IFS variable
 
 Di sini, string input terdiri dari elemen-elemen yang dipisahkan oleh tanda hubung. Variabel shell IFS (Internal Field Separator) diatur menjadi tanda hubung, dan string tersebut diiterasi menggunakan loop for.
 
-![App Screenshot](img/file-name/5.pngg)
+![App Screenshot](img/split-string/3.png)
 
 Output : 
 
-![App Screenshot](img/file-name/6.png)
+![App Screenshot](img/split-string/4.png)
 
 ##### Use Parameter expansion and loop
 
 Ekspansi parameter digunakan untuk mengubah nilai variabel berdasarkan opsi yang ditentukan. Dalam kasus ini, sebuah variabel string dikonversi menjadi sebuah array. Array tersebut kemudian diiterasi menggunakan sintaks loop for, mencetak setiap elemen ke konsol.
 
-![App Screenshot](img/file-name/7.png)
+![App Screenshot](img/split-string/5.png)
 
 Output : 
 
-![App Screenshot](img/file-name/8.png)
+![App Screenshot](img/split-string/6.png)
 
 ## Bash - String Length
 
@@ -1252,21 +1259,24 @@ Dalam contoh di atas, ganti `variable` dengan nama variabel yang ingin Anda peri
 contoh : 
 
 
-![App Screenshot](img/setvar1.jpg)
+![App Screenshot](img/variabelset/varset1.png)
 
 Output : 
-![App Screenshot](img/setvar2.jpg)
+
+![App Screenshot](img/variabelset/varset1.2.png)
 
 
-![App Screenshot](img/setvar3.jpg)
-
-Output : 
-![App Screenshot](img/setvar4.jpg)
-
-![App Screenshot](img/setvar5.jpg)
+![App Screenshot](img/variabelset/varset2.png)
 
 Output : 
-![App Screenshot](img/setvar6.jpg)
+
+![App Screenshot](img/variabelset/varset2.2.png)
+
+![App Screenshot](img/variabelset/varset3.png)
+
+Output : 
+
+![App Screenshot](img/variabelset/varset3.2.png)
 
 ## Bash - Iterate Nos
 
